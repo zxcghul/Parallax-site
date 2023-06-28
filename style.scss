@@ -1,0 +1,53 @@
+:root {
+    --index: calc(1vw +1vh)
+}
+body {
+    background-color: #00072c;
+    font-size: 14px;
+}
+.main {
+    position: relative;
+}
+.layers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-article {
+    min-height: 100vh;
+}
+
+.layers__layer1 {
+    transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+}
+
+.layers__layer2 {
+    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+
+.layers__layer3 {
+    transform: translate3d(0, calc(var(--scrollTop) / 4), 0);
+}
+
+.layers__text {
+    position: relative;
+    top: -30%;
+    z-index: 1;
+    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+    font-family: Lucida Console, Courier, monospace;
+    font-size: calc(var(--index)  * 5);
+    letter-spacing: calc(var(--index) / 2);
+    color:#ffffff;
+    div {
+        text-shadow: 4px 3px 15px black;
+    }
+}
